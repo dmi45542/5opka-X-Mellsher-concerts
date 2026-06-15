@@ -1,6 +1,6 @@
 // Таймер
 const timer = document.getElementById('timer');
-const date = new Date('2026-08-23');
+const date = new Date('2026-07-23');
 
     setInterval(() => {
         const now = new Date();
