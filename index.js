@@ -12,5 +12,25 @@ const date = new Date('2026-07-23');
             timer.innerHTML = `
                 ${days}дн ${hours}ч ${minutes}мин ${seconds}сек
             `;
-            timer.style.fontSize = '30px';
+            timer.style.fontSize = '20px';
+            if (timer.innerHTML === '0дн 0ч 0мин 0сек') {
+                timer.innerHTML = `
+                    концерт начался
+                `;
+            }
+
+            // чем меньше время, тем краснее
+
+            if (days < 42) {
+                timer.style.color = '#FFA07A';
+            }
+            if (days < 21) {
+                timer.style.color = '#FF6347';
+            }
+            if (days < 7) {
+                timer.style.color = '#FF4500';
+            }
+            if (days < 1) {
+                timer.style.color = '#FF0000';
+            }
     }, 1000);
