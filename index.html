@@ -14,7 +14,19 @@
             <img src="./img/microphone.png" alt="logo">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#about">Об исполнителях</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Исполнители ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#about-5opka">5opka X MellSher</a></li>
+                            <li><a href="#about-mellsher">СТИНТ</a></li>
+                            <li><a href="#about-both">MZLFF</a></li>
+                            <li><a href="#compare">Lida</a></li>
+                            <li><a href="#about-5opka">CMH</a></li>
+                            <li><a href="#about-mellsher">Booker</a></li>
+                            <li><a href="#about-both">Слава КПСС</a></li>
+                            <li><a href="#compare">22 раза</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#photo">Фото</a></li>
                     <li><a href="#video">Видео</a></li>
                     <li><a href="#concerts">Ближайшие концерты</a></li>
@@ -23,6 +35,36 @@
             </nav>
         </div>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.dropdown-toggle');
+            const menu = document.querySelector('.dropdown-menu');
+
+            btn.onclick = (e) => {
+                e.preventDefault();
+                menu.classList.toggle('active');
+            }
+
+            menu.onclick = (e) => {
+                const link = e.target.closest('a');
+                if (!link) {
+                    return;
+                }
+
+                e.preventDefault();
+                btn.textContent = link.textContent + ' ▼';
+                menu.classList.remove('active');
+            }
+
+            document.onclick = (e) => {
+                if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                    menu.classList.remove('active');
+                }
+            }
+        })
+
+    </script>
 
     <section id="header" class="header-section">
         <h1>5opka и <br>MellSher</h1>

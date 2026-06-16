@@ -52,6 +52,67 @@ html, body {
     color: #3cb4ec;
 }
 
+/* Стили для выпадающего меню */
+.dropdown {
+    position: relative; /* Важно для позиционирования выпадающего списка */
+}
+
+.dropdown-menu {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    top: 100%; /* Появляется под родительским элементом */
+    left: 0;
+    background-color: #1a1a1a; /* Темный фон, под ваш дизайн */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 1000;
+    list-style: none;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333333;
+    border-radius: 4px;
+}
+
+/* Класс для открытого меню */
+.dropdown-menu.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стиль для активной выбранной опции */
+.dropdown-menu a.selected {
+    background-color: #4a4a4a;
+    color: #ff6b6b; /* Или любой цвет, который у вас в теме */
+    font-weight: bold;
+}
+
 /* Секция заголовка */
 .header-section {
     margin-top: 20px;
@@ -352,6 +413,15 @@ footer {
     
     .music-section iframe {
         height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static; /* На мобилках меню будет под элементом */
+        width: 100%;
+        box-shadow: none;
+        background-color: #2a2a2a;
     }
 }
 
