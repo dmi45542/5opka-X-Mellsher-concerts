@@ -37,3 +37,28 @@ const date = new Date('2026-07-23');
 
 // открытие и закрытие меню с исполнителями
 
+        document.addEventListener('DOMContentLoaded', () => { // добавляем обработчик события DOMContentLoaded (взаимодействие с html)
+            const btn = document.querySelector('.dropdown-toggle'); // находим кнопку "Исполнители"
+            const menu = document.querySelector('.dropdown-menu'); // находим меню
+
+            btn.onclick = (e) => { // добавляем обработчик события клика на кнопку
+                e.preventDefault(); // отменяем стандартное поведение ссылки
+                menu.classList.toggle('active'); // добавляем или удаляем класс active - то есть показываем или скрываем меню
+            }
+
+            menu.onclick = (e) => { // добавляем обработчик события клика на меню
+                const link = e.target.closest('a'); // находим ссылку внутри меню - е - это событие клика, target - это элемент, на котором произошло событие, closest - ищет ближайшего родителя, у которого есть класс "link"
+                if (!link) {
+                    return;
+                }
+
+                btn.textContent = link.textContent + ' ▼';  // меняем текст кнопки на текст ссылки
+                menu.classList.remove('active'); 
+            }
+
+            document.onclick = (e) => { // добавляем обработчик события клика на документ
+                if (!btn.contains(e.target) && !menu.contains(e.target)) { // если клик не по кнопке и не по меню
+                    menu.classList.remove('active'); // скрываем меню
+                }
+            }
+        });

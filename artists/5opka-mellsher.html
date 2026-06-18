@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="./media.css">
-    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="../artists-styles/5opka-mellsher.css">
+    <script defer src="../index.js"></script>
     <title>Концерты 5opka x MellSher</title>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <img src="./img/microphone.png" alt="logo">
+            <img src="../img/microphone.png" alt="logo">
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Исполнители ▼</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#about-5opka">5opka X MellSher</a></li>
-                            <li><a href="#about-mellsher">СТИНТ</a></li>
+                            <li><a href="./5opka-mellsher.html">5opka X MellSher</a></li>
+                            <li><a href="./stint.html">СТИНТ</a></li>
                             <li><a href="#about-both">MZLFF</a></li>
                             <li><a href="#compare">Lida</a></li>
                             <li><a href="#about-5opka">CMH</a></li>
@@ -36,50 +35,20 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.querySelector('.dropdown-toggle');
-            const menu = document.querySelector('.dropdown-menu');
-
-            btn.onclick = (e) => {
-                e.preventDefault();
-                menu.classList.toggle('active');
-            }
-
-            menu.onclick = (e) => {
-                const link = e.target.closest('a');
-                if (!link) {
-                    return;
-                }
-
-                e.preventDefault();
-                btn.textContent = link.textContent + ' ▼';
-                menu.classList.remove('active');
-            }
-
-            document.onclick = (e) => {
-                if (!btn.contains(e.target) && !menu.contains(e.target)) {
-                    menu.classList.remove('active');
-                }
-            }
-        })
-
-    </script>
-
     <section id="header" class="header-section">
         <h1>5opka и <br>MellSher</h1>
-        <img src="./img/5opkaMellSher.webp" alt="5opka and MellSher">
+        <img src="../img/5opkaMellSher.webp" alt="5opka and MellSher">
     </section>
 
     <section id="about" class="about-section">
         <h2>О исполнителях</h2>
             <div>
                 <div class="about-5opka">
-                    <img src="./img/5opka.png" alt="5opka">
-<h3>5opka — дерзкий голос московских улиц. Острые рифмы, хлёсткие тексты и энергия, которая не оставляет равнодушным. От подпольных баттлов до больших сцен — каждый его трек прожигает насквозь.</h3></div>
+                    <img src="../img/5opka.png" alt="5opka">
+                    <h3>5opka — дерзкий голос московских улиц. Острые рифмы, хлёсткие тексты и энергия, которая не оставляет равнодушным. От подпольных баттлов до больших сцен — каждый его трек прожигает насквозь.</h3></div>
                 <div class="about-mellsher">
                     <h3>MellSher — мелодичный рэп с душой. Глубокие тексты и гипнотический ритм создают атмосферу, от которой нельзя оторваться. Его музыка — это исповедь, которая находит отклик в каждом сердце.</h3>
-                    <img src="./img/MellSher.png" alt="MellSher">
+                    <img src="../img/MellSher.png" alt="MellSher">
                 </div>
             </div>
     </section>
@@ -87,12 +56,12 @@
     <section id="photo" class="photo-section">
         <h2>Фотографии с концертов</h2>
         <div class="photos">
-            <img src="./img/photo1.jpg" alt="photo1">
-            <img src="./img/photo2.jpg" alt="photo2">
-            <img src="./img/photo3.jpg" alt="photo3">
-            <img src="./img/photo5.jpg" alt="photo5">
-            <img src="./img/photo6.jpg" alt="photo6">
-            <img src="./img/photo8.jpg" alt="photo8">
+            <img src="../img/photo1.jpg" alt="photo1">
+            <img src="../img/photo2.jpg" alt="photo2">
+            <img src="../img/photo3.jpg" alt="photo3">
+            <img src="../img/photo5.jpg" alt="photo5">
+            <img src="../img/photo6.jpg" alt="photo6">
+            <img src="../img/photo8.jpg" alt="photo8">
         </div>
     </section>
 
@@ -108,7 +77,7 @@
     <section id="concerts" class="concerts-section">
         <h2>Ближайшие концерты</h2>
         <div class="concert">
-            <img src="./img/territoriya.webp" alt="">
+            <img src="../img/territoriya.webp" alt="">
             <h2>23 июля</h2>
             <h3>Москва <br>Клуб Территория (open air)</h3>
             <div class="timer_container">

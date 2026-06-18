@@ -19,7 +19,6 @@ html, body {
 }
 
 .header {
-    background-color: #000;
     padding: 10px;
     text-align: center;
 }
@@ -126,15 +125,15 @@ html, body {
 }
 
 .header-section img {
-    margin-left: 150px;
     border-radius: 10px;
-    width: 500px;
+    width: 1100px;
     height: 700px;
     position: relative;
     z-index: 1;
     -webkit-mask: linear-gradient(to top, transparent 0%, #000 100%);
     mask: linear-gradient(to top, transparent 0%, #000 40%);
-    background: radial-gradient(circle, rgba(60, 52, 220, 0.8) 0%, rgba(60, 52, 220, 0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(60, 52, 220, 0) 50%);
+    animation: fadeIn 1s ease;
 }
 
 /* Заголовки секций */
@@ -158,28 +157,40 @@ html, body {
 
 .about-5opka, .about-mellsher {
     display: flex;
-    margin: 0 100px;
+    margin: 0px;
 }
 
 .about-mellsher h3 {
     margin-top: 100px;
 }
 
+.about-5opka h3 {
+    margin-top: 100px;
+    width: 500px;
+}
+
 .about-section .about-5opka img,
 .about-section .about-mellsher img {
     width: 500px;
+    height: 500px;
     object-fit: cover;
     border-radius: 10px;
     margin-right: 100px;
+    
 }
 
 .about-5opka img {
-    background: radial-gradient(circle, rgba(219, 46, 11, 0.8) 0%, rgba(34, 27, 170, 0) 70%);
+    -webkit-mask: linear-gradient(to top, transparent 0%, #000 100%);
+    mask: linear-gradient(to top, transparent 0%, #000 40%);
+    background: radial-gradient(circle, rgba(60, 52, 220, 0.8) 0%, rgba(60, 52, 220, 0) 70%);
+    animation: fadeIn 1s ease;
 }
 
 .about-mellsher img {
-    background: radial-gradient(circle, rgba(191, 11, 219, 0.8) 0%, rgba(34, 27, 170, 0) 70%);
-}
+    -webkit-mask: linear-gradient(to top, transparent 0%, #000 100%);
+    mask: linear-gradient(to top, transparent 0%, #000 40%);
+    background: radial-gradient(circle, rgba(60, 52, 220, 0.8) 0%, rgba(60, 52, 220, 0) 70%);
+    animation: fadeIn 1s ease;}
 
 .about-section h3 {
     font-size: 25px;
